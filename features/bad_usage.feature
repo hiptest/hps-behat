@@ -4,7 +4,7 @@ Feature: Bad usage
     So I can have coffee and let other people have to clean after me
 
   @priority-low
-  Scenario: Full grounds does not block coffee
+  Scenario: Full grounds doesn't block coffee
     # You keep getting coffee even if the "Empty grounds" message is displayed. That said it's not a fantastic idea, you'll get ground everywhere when you'll decide to empty it.
     Given the coffee machine is started
     And I handle something except the grounds

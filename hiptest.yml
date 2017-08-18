@@ -1,0 +1,3 @@
+branches:
+  except:
+    - to-be-ignore

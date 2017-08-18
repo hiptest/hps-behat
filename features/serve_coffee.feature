@@ -6,8 +6,6 @@ Feature: Serve coffee
 
   @priority-high
   Scenario: Simple use
-    Simple use of the coffee machine
-    
     Given the coffee machine is started
     When I take a coffee
     Then coffee should be served

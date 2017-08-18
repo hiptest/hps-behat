@@ -8,7 +8,6 @@ Feature: Serve coffee
   Scenario: Simple use
     Simple use of the coffee machine
     
-    # Well, sometimes, you just get a coffee.
     Given the coffee machine is started
     When I take a coffee
     Then coffee should be served

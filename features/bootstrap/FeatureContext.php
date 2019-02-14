@@ -76,7 +76,7 @@ class FeatureContext implements SnippetAcceptingContext {
   }
 
   /**
-   * @Given /^I take "(.*)" coffees$/
+   * @When /^I take "(.*)" coffees$/
    */
   public function iTakeCoffeeNumberCoffees($coffee_number){
     $this->actionwords->iTakeCoffeeNumberCoffees($coffee_number);

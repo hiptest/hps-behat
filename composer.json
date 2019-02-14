@@ -1,8 +1,8 @@
 {
     "require-dev": {
-        "behat/behat": "~3.0.4",
+        "behat/behat": "^3.5",
         "vanare/behat-cucumber-json-formatter": "^1.1",
-        "phpunit/phpunit": "^5.2",
+        "phpunit/phpunit": "^7.5",
         "jarnaiz/behat-junit-formatter": "^1.3"
     }
 }

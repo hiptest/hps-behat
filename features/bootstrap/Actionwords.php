@@ -1,6 +1,6 @@
 <?php
 require_once('src/CoffeeMachine.php');
-use PHPUnit_Framework_Assert as Assert;
+use PHPUnit\Framework\Assert as Assert;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 
@@ -23,15 +23,15 @@ class Actionwords {
   }
 
   public function messageMessageShouldBeDisplayed($message) {
-    PHPUnit_Framework_Assert::assertEquals($message, $this->sut->getMessage());
+    PHPUnit\Framework\Assert::assertEquals($message, $this->sut->getMessage());
   }
 
   public function coffeeShouldBeServed() {
-    PHPUnit_Framework_Assert::assertTrue($this->sut->coffeeServed);
+    PHPUnit\Framework\Assert::assertTrue($this->sut->coffeeServed);
   }
 
   public function coffeeShouldNotBeServed() {
-    PHPUnit_Framework_Assert::assertFalse($this->sut->coffeeServed);
+    PHPUnit\Framework\Assert::assertFalse($this->sut->coffeeServed);
   }
 
   public function iTakeACoffee() {
@@ -121,7 +121,7 @@ class Actionwords {
       $settings[$row[0]] = $row[1];
     }
 
-    PHPUnit_Framework_Assert::assertEquals($settings, $this->sut->getSettings());
+    PHPUnit\Framework\Assert::assertEquals($settings, $this->sut->getSettings());
   }
 }
 ?>

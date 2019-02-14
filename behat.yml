@@ -2,4 +2,4 @@ default:
     extensions:
         Vanare\BehatCucumberJsonFormatter\Extension:
             filename: report.json
-            outputDir: %paths.base%/results
+            outputDir: results

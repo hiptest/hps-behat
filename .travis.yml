@@ -8,11 +8,11 @@ before_install:
   - rvm install 2.2
   - rvm use 2.2
   - gem install hiptest-publisher
-  - "hiptest-publisher -c behat.conf --token=$SECRET_TOKEN --only=features,step_definitions --test-run-id=16135"
+  - "hiptest-publisher -c behat.conf --only=features,step_definitions --test-run-id=235506"
   - composer install
 
 script:
   - vendor/bin/behat -f cucumber_json
 
 after_script:
-  - hiptest-publisher -c behat.conf --token=$SECRET_TOKEN --push=results/report.json --test-run-id=16135
+  - hiptest-publisher -c behat.conf  --push=results/report.json --test-run-id=235506

@@ -151,5 +151,12 @@ class FeatureContext implements SnippetAcceptingContext {
   public function settingsShouldBe(TableNode $__datatable){
     $this->actionwords->settingsShouldBe($__datatable);
   }
+
+  /**
+   * @Then /^a notification about descaling is displayed "(.*)"$/
+   */
+  public function aNotificationAboutDescalingIsDisplayed($message){
+    $this->actionwords->aNotificationAboutDescalingIsDisplayed($message);
+  }
 }
 ?>

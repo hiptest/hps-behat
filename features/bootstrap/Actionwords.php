@@ -115,10 +115,6 @@ class Actionwords {
     $this->sut->showSettings();
   }
 
-  public function aNotificationAboutDescalingIsDisplayed($message) {
-    PHPUnit_Framework_Assert::assertEquals($message, $this->sut->getMessage());
-}
-
   public function settingsShouldBe(TableNode $__datatable) {
     $settings = [];
     foreach ($__datatable->getRows() as $row) {

@@ -41,7 +41,7 @@ Run tests
 To build the project and run the tests, use the following command:
 
     php composer.phar install
-    vendor/bin/behat -f junit
+    vendor/bin/behat -f cucumber_json
 
 The SUT implementation can be seen in [``src/CoffeeMachine.php``](https://github.com/hiptest/hps-behat/blob/master/src/CoffeeMachine.php)
 

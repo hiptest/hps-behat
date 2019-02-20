@@ -11,7 +11,6 @@ class FeatureContext implements SnippetAcceptingContext {
     $this->actionwords = new Actionwords();
   }
 
-// test
   /**
    * @When /^I start the coffee machine using language "(.*)"$/
    */

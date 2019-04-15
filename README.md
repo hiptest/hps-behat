@@ -6,7 +6,7 @@ test 1
 
 Hiptest publisher samples with Behat
 
-In this repository you'll find tests generated in Behat format from [Hiptest](https://hiptest.net), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
+In this repository you'll find tests generated in Behat format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
 The goals are:
 
@@ -44,7 +44,7 @@ Run tests
 To build the project and run the tests, use the following command:
 
     php composer.phar install
-    vendor/bin/behat -f junit
+    vendor/bin/behat -f cucumber_json
 
 The SUT implementation can be seen in [``src/CoffeeMachine.php``](https://github.com/hiptest/hps-behat/blob/master/src/CoffeeMachine.php)
 

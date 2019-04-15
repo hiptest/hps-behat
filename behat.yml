@@ -1,5 +1,5 @@
 default:
     extensions:
-        jarnaiz\JUnitFormatter\JUnitFormatterExtension:
-            filename: report.xml
+        Vanare\BehatCucumberJsonFormatter\Extension:
+            filename: report.json
             outputDir: %paths.base%/results

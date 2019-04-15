@@ -12,7 +12,7 @@ before_install:
   - composer install
 
 script:
-  - vendor/bin/behat -f junit
+  - vendor/bin/behat -f cucumber_json
 
 after_script:
-  - hiptest-publisher -c behat.conf --push=results/report.xml --test-run-id=73157
+  - hiptest-publisher -c behat.conf --token=$SECRET_TOKEN --push=results/report.json --test-run-id=16135

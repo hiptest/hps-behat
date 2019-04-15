@@ -1,6 +1,8 @@
 <?php
 require_once('src/CoffeeMachine.php');
 use PHPUnit_Framework_Assert as Assert;
+use Behat\Gherkin\Node\PyStringNode;
+use Behat\Gherkin\Node\TableNode;
 
 class Actionwords {
   var $sut;
@@ -105,7 +107,7 @@ class Actionwords {
     $this->handleCoffeeGrounds = true;
   }
 
-  public function displayedMessageIs($__free_text = "") {
+  public function displayedMessageIs(PyStringNode $__free_text) {
     $this->messageMessageShouldBeDisplayed($__free_text);
   }
 
@@ -113,7 +115,7 @@ class Actionwords {
     $this->sut->showSettings();
   }
 
-  public function settingsShouldBe($__datatable = "||") {
+  public function settingsShouldBe(TableNode $__datatable) {
     $settings = [];
     foreach ($__datatable->getRows() as $row) {
       $settings[$row[0]] = $row[1];

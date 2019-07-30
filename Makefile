@@ -3,7 +3,7 @@ default: test
 
 install_prerequisites:
 	composer install
-.PHONY: install
+.PHONY: install_prerequisites
 
 generate_tests:
 	hiptest-publisher -c behat.conf -t "$(SECRET_TOKEN)" --without=actionwords

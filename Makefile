@@ -18,5 +18,5 @@ test: install_prerequisites
 .PHONY: test
 
 push_results:
-	hiptest-publisher --config behat.conf --token "$(SECRET_TOKEN)" --test-run-id $(TEST_RUN_ID) --push=results/report.json
+	hiptest-publisher --config behat.conf --token "$(SECRET_TOKEN)" --test-run-id $(TEST_RUN_ID) --push=results/report.json --execution-environment=CircleCI
 .PHONY: push_results

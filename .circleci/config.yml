@@ -5,16 +5,21 @@ jobs:
       - image: circleci/php:7.2
     steps:
       - checkout
-      - run: |
-        make install_prerequisites
-        sudo apt-get update
-        sudo apt-get install ruby ruby-dev
-        sudo gem install hiptest-publisher
-      - run: |
-        make generate_tests_from_test_run
-        make test
-      - run: |
-        make push_results
+      - run:
+          name: INstall publisher and dependencies
+          command: |
+            make install_prerequisites
+            sudo apt-get update
+            sudo apt-get install ruby ruby-dev
+            sudo gem install hiptest-publisher
+      - run:
+          name: Run tests
+          command: |
+            make generate_tests_from_test_run
+            make test
+      - run:
+          name: Push results
+          command: make push_results
 
 workflows:
   version: 2

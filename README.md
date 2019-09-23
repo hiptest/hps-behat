@@ -1,4 +1,5 @@
 # hps-behat
+[![CircleCI](https://circleci.com/gh/hiptest/hps-behat.svg?style=svg)](https://circleci.com/gh/hiptest/hps-behat)
 [![Build Status](https://travis-ci.org/hiptest/hps-behat.svg?branch=master)](https://travis-ci.org/hiptest/hps-behat)
 
 Hiptest publisher samples with Behat

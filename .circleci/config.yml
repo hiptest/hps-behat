@@ -15,11 +15,11 @@ jobs:
       - run:
           name: Run tests
           command: |
-            hiptest-publisher --config behat.conf --token "$(SECRET_TOKEN)" --test-run-id $(TEST_RUN_ID) --without=actionwords
+            hiptest-publisher --config behat.conf --token $SECRET_TOKEN --test-run-id $TEST_RUN_ID --without=actionwords
             vendor/bin/behat -f cucumber_json
       - run:
           name: Push results
-          command: hiptest-publisher --config behat.conf --token "$(SECRET_TOKEN)" --test-run-id $(TEST_RUN_ID) --push=results/report.json --execution-environment=CircleCI
+          command: hiptest-publisher --config behat.conf --token $SECRET_TOKEN --test-run-id $TEST_RUN_ID --push=results/report.json --execution-environment=CircleCI
 
 workflows:
   version: 2

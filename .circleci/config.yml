@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: INstall publisher and dependencies
+          name: Install publisher and dependencies
           command: |
             make install_prerequisites
             sudo apt-get update
@@ -15,11 +15,11 @@ jobs:
       - run:
           name: Run tests
           command: |
-            make generate_tests_from_test_run
-            make test
+            hiptest-publisher --config behat.conf --token "$(SECRET_TOKEN)" --test-run-id $(TEST_RUN_ID) --without=actionwords
+            vendor/bin/behat -f cucumber_json
       - run:
           name: Push results
-          command: make push_results
+          command: hiptest-publisher --config behat.conf --token "$(SECRET_TOKEN)" --test-run-id $(TEST_RUN_ID) --push=results/report.json --execution-environment=CircleCI
 
 workflows:
   version: 2

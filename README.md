@@ -29,7 +29,7 @@ Update tests
 
 To update the tests:
 
-    hiptest-publisher -c behat.conf --only=features,step_definitions
+    hiptest-publisher -c behat.conf --without=actionwords
 
 The tests are generated in the [``features``](https://github.com/hiptest/hps-behat/tree/master/features) directory.
 
